@@ -72,15 +72,15 @@
         <script type='text/javascript' src='<?php echo get_template_directory_uri(); ?>/js/superfish.js?ver=1.7.5'></script>
         <script type='text/javascript' src='<?php echo get_template_directory_uri(); ?>/js/superfish.args.js?ver=2.5.3'></script>
         <script type='text/javascript' src='<?php echo get_template_directory_uri(); ?>/js/responsive.js?ver=2.2.1'></script>
-        <script type='text/javascript' src='http://ozviegroup.com/wp-content/uploads/dynamik-gen/theme/custom-scripts.js?ver=1509224423'></script>
+        <script type='text/javascript' src='<?php echo get_template_directory_uri(); ?>/js/custom-scripts.js?ver=1509224423'></script>
         <script type='text/javascript'>
             /* <![CDATA[ */
-            var et_pb_custom = {"ajaxurl":"http:\/\/ozviegroup.com\/wp-admin\/admin-ajax.php","images_uri":"http:\/\/ozviegroup.com\/wp-content\/themes\/genesis\/images","builder_images_uri":"http:\/\/ozviegroup.com\/wp-content\/plugins\/divi-builder\/includes\/builder\/images","et_frontend_nonce":"e57d38629f","subscription_failed":"Please, check the fields below to make sure you entered the correct information.","et_ab_log_nonce":"e4304e1a31","fill_message":"Please, fill in the following fields:","contact_error_message":"Please, fix the following errors:","invalid":"Invalid email","captcha":"Captcha","prev":"Prev","previous":"Previous","next":"Next","wrong_captcha":"You entered the wrong number in captcha.","is_builder_plugin_used":"1","ignore_waypoints":"no","is_divi_theme_used":"","widget_search_selector":".widget_search","is_ab_testing_active":"","page_id":"40","unique_test_id":"","ab_bounce_rate":"5","is_cache_plugin_active":"no","is_shortcode_tracking":""};
+            var et_pb_custom = {"ajaxurl":"\/wp-admin\/admin-ajax.php","images_uri":"http:\/\/ozviegroup.com\/wp-content\/themes\/genesis\/images","builder_images_uri":"http:\/\/ozviegroup.com\/wp-content\/plugins\/divi-builder\/includes\/builder\/images","et_frontend_nonce":"e57d38629f","subscription_failed":"Please, check the fields below to make sure you entered the correct information.","et_ab_log_nonce":"e4304e1a31","fill_message":"Please, fill in the following fields:","contact_error_message":"Please, fix the following errors:","invalid":"Invalid email","captcha":"Captcha","prev":"Prev","previous":"Previous","next":"Next","wrong_captcha":"You entered the wrong number in captcha.","is_builder_plugin_used":"1","ignore_waypoints":"no","is_divi_theme_used":"","widget_search_selector":".widget_search","is_ab_testing_active":"","page_id":"40","unique_test_id":"","ab_bounce_rate":"5","is_cache_plugin_active":"no","is_shortcode_tracking":""};
             /* ]]> */
         </script>
-        <script type='text/javascript' src='http://ozviegroup.com/wp-content/plugins/divi-builder/js/divi-builder.min.js?ver=2.0.39'></script>
-        <script type='text/javascript' src='http://ozviegroup.com/wp-includes/js/jquery/ui/core.min.js?ver=1.11.4'></script>
-        <script type='text/javascript' src='http://ozviegroup.com/wp-includes/js/jquery/ui/datepicker.min.js?ver=1.11.4'></script>
+        <script type='text/javascript' src='<?php echo get_template_directory_uri(); ?>/js/divi-builder.min.js?ver=2.0.39'></script>
+        <script type='text/javascript' src='<?php echo includes_url(); ?>/js/jquery/ui/core.min.js?ver=1.11.4'></script>
+        <script type='text/javascript' src='<?php echo includes_url(); ?>/js/jquery/ui/datepicker.min.js?ver=1.11.4'></script>
         <script type='text/javascript'>
             jQuery(document).ready(function(jQuery){jQuery.datepicker.setDefaults({"closeText":"Close","currentText":"Today","monthNames":["January","February","March","April","May","June","July","August","September","October","November","December"],"monthNamesShort":["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"nextText":"Next","prevText":"Previous","dayNames":["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],"dayNamesShort":["Sun","Mon","Tue","Wed","Thu","Fri","Sat"],"dayNamesMin":["S","M","T","W","T","F","S"],"dateFormat":"dd\/mm\/yy","firstDay":1,"isRTL":false});});
         </script>
@@ -92,24 +92,24 @@
             var _wpmejsSettings = {"pluginPath":"\/wp-includes\/js\/mediaelement\/"};
             /* ]]> */
         </script>
-        <script type='text/javascript' src='http://ozviegroup.com/wp-includes/js/mediaelement/mediaelement-and-player.min.js?ver=2.22.0'></script>
-        <script type='text/javascript' src='http://ozviegroup.com/wp-includes/js/mediaelement/wp-mediaelement.min.js?ver=4.8.6'></script>
-        <script type='text/javascript' src='http://ozviegroup.com/wp-includes/js/underscore.min.js?ver=1.8.3'></script>
+        <script type='text/javascript' src='<?php echo includes_url(); ?>/js/mediaelement/mediaelement-and-player.min.js?ver=2.22.0'></script>
+        <script type='text/javascript' src='<?php echo includes_url(); ?>/js/mediaelement/wp-mediaelement.min.js?ver=4.8.6'></script>
+        <script type='text/javascript' src='<?php echo includes_url(); ?>/js/underscore.min.js?ver=1.8.3'></script>
         <script type='text/javascript'>
             /* <![CDATA[ */
             var _wpUtilSettings = {"ajax":{"url":"\/wp-admin\/admin-ajax.php"}};
             var _wpUtilSettings = {"ajax":{"url":"\/wp-admin\/admin-ajax.php"}};
             /* ]]> */
         </script>
-        <script type='text/javascript' src='http://ozviegroup.com/wp-includes/js/wp-util.min.js?ver=4.8.6'></script>
-        <script type='text/javascript' src='http://ozviegroup.com/wp-includes/js/backbone.min.js?ver=1.2.3'></script>
-        <script type='text/javascript' src='http://ozviegroup.com/wp-includes/js/mediaelement/wp-playlist.min.js?ver=4.8.6'></script>
+        <script type='text/javascript' src='<?php echo includes_url(); ?>/js/wp-util.min.js?ver=4.8.6'></script>
+        <script type='text/javascript' src='<?php echo includes_url(); ?>/js/backbone.min.js?ver=1.2.3'></script>
+        <script type='text/javascript' src='<?php echo includes_url(); ?>/js/mediaelement/wp-playlist.min.js?ver=4.8.6'></script>
         <script type='text/javascript'>
             /* <![CDATA[ */
-            var wpv_pagination_local = {"front_ajaxurl":"http:\/\/ozviegroup.com\/wp-admin\/admin-ajax.php","calendar_image":"http:\/\/ozviegroup.com\/wp-content\/plugins\/wp-views\/embedded\/res\/img\/calendar.gif","calendar_text":"Select date","datepicker_min_date":null,"datepicker_max_date":null,"resize_debounce_tolerance":"100","datepicker_style_url":"http:\/\/ozviegroup.com\/wp-content\/plugins\/types\/vendor\/toolset\/toolset-common\/toolset-forms\/css\/wpt-jquery-ui\/jquery-ui-1.11.4.custom.css"};
+            var wpv_pagination_local = {"front_ajaxurl":"\/wp-admin\/admin-ajax.php","calendar_image":"http:\/\/ozviegroup.com\/wp-content\/plugins\/wp-views\/embedded\/res\/img\/calendar.gif","calendar_text":"Select date","datepicker_min_date":null,"datepicker_max_date":null,"resize_debounce_tolerance":"100","datepicker_style_url":"http:\/\/ozviegroup.com\/wp-content\/plugins\/types\/vendor\/toolset\/toolset-common\/toolset-forms\/css\/wpt-jquery-ui\/jquery-ui-1.11.4.custom.css"};
             /* ]]> */
         </script>
-        <script type='text/javascript' src='http://ozviegroup.com/wp-content/plugins/wp-views/embedded/res/js/wpv-pagination-embedded.js?ver=2.4.1'></script>
-        <script type='text/javascript' src='http://ozviegroup.com/wp-includes/js/wp-embed.min.js?ver=4.8.6'></script>
+        <script type='text/javascript' src='<?php echo get_template_directory_uri(); ?>/js/wpv-pagination-embedded.js?ver=2.4.1'></script>
+        <script type='text/javascript' src='<?php echo includes_url(); ?>/js/wp-embed.min.js?ver=4.8.6'></script>
     </body>
 </html>

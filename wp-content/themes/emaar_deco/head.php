@@ -6,15 +6,15 @@
     <meta name="description" content="Ovzvie, where your ideas become reality" />
     <meta name="robots" content="noodp,noydir" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" id="dynamik-viewport"/>
-    <script>var et_site_url='http://ozviegroup.com';var et_post_id='40';function et_core_page_resource_fallback(a,b){"undefined"===typeof b&&(b=a.sheet.cssRules&&0===a.sheet.cssRules.length);b&&(a.onerror=null,a.onload=null,a.href?a.href=et_site_url+"/?et_core_page_resource="+a.id+et_post_id:a.src&&(a.src=et_site_url+"/?et_core_page_resource="+a.id+et_post_id))}
+    <script>var et_site_url='<?php echo get_site_url(); ?>';var et_post_id='40';function et_core_page_resource_fallback(a,b){"undefined"===typeof b&&(b=a.sheet.cssRules&&0===a.sheet.cssRules.length);b&&(a.onerror=null,a.onload=null,a.href?a.href=et_site_url+"/?et_core_page_resource="+a.id+et_post_id:a.src&&(a.src=et_site_url+"/?et_core_page_resource="+a.id+et_post_id))}
     </script>
-    <link rel="alternate" hreflang="en-us" href="http://ozviegroup.com/" />
-    <link rel="alternate" hreflang="vi" href="http://ozviegroup.com/vi/" />
+    <link rel="alternate" hreflang="en-us" href="<?php echo get_site_url(); ?>/" />
+    <link rel="alternate" hreflang="vi" href="<?php echo get_site_url(); ?>/vi/" />
     <link rel='dns-prefetch' href='//fonts.googleapis.com' />
     <link rel='dns-prefetch' href='//s.w.org' />
-    <link rel="alternate" type="application/rss+xml" title="Ozvie Group &raquo; Feed" href="http://ozviegroup.com/feed/" />
-    <link rel="alternate" type="application/rss+xml" title="Ozvie Group &raquo; Comments Feed" href="http://ozviegroup.com/comments/feed/" />
-    <link rel="canonical" href="http://ozviegroup.com/" />
+    <link rel="alternate" type="application/rss+xml" title="Ozvie Group &raquo; Feed" href="<?php echo get_site_url(); ?>/feed/" />
+    <link rel="alternate" type="application/rss+xml" title="Ozvie Group &raquo; Comments Feed" href="<?php echo get_site_url(); ?>/comments/feed/" />
+    <link rel="canonical" href="<?php echo get_site_url(); ?>/" />
     <script type="text/javascript">
         window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/2.3\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/2.3\/svg\/","svgExt":".svg","source":{"concatemoji":"http:\/\/ozviegroup.com\/wp-includes\/js\/wp-emoji-release.min.js?ver=4.8.6"}};
         !function(a,b,c){function d(a){var b,c,d,e,f=String.fromCharCode;if(!k||!k.fillText)return!1;switch(k.clearRect(0,0,j.width,j.height),k.textBaseline="top",k.font="600 32px Arial",a){case"flag":return k.fillText(f(55356,56826,55356,56819),0,0),b=j.toDataURL(),k.clearRect(0,0,j.width,j.height),k.fillText(f(55356,56826,8203,55356,56819),0,0),c=j.toDataURL(),b!==c&&(k.clearRect(0,0,j.width,j.height),k.fillText(f(55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447),0,0),b=j.toDataURL(),k.clearRect(0,0,j.width,j.height),k.fillText(f(55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447),0,0),c=j.toDataURL(),b!==c);case"emoji4":return k.fillText(f(55358,56794,8205,9794,65039),0,0),d=j.toDataURL(),k.clearRect(0,0,j.width,j.height),k.fillText(f(55358,56794,8203,9794,65039),0,0),e=j.toDataURL(),d!==e}return!1}function e(a){var c=b.createElement("script");c.src=a,c.defer=c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var f,g,h,i,j=b.createElement("canvas"),k=j.getContext&&j.getContext("2d");for(i=Array("flag","emoji4"),c.supports={everything:!0,everythingExceptFlag:!0},h=0;h<i.length;h++)c.supports[i[h]]=d(i[h]),c.supports.everything=c.supports.everything&&c.supports[i[h]],"flag"!==i[h]&&(c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&c.supports[i[h]]);c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&!c.supports.flag,c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.everything||(g=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",g,!1),a.addEventListener("load",g,!1)):(a.attachEvent("onload",g),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),f=c.source||{},f.concatemoji?e(f.concatemoji):f.wpemoji&&f.twemoji&&(e(f.twemoji),e(f.wpemoji)))}(window,document,window._wpemojiSettings);
@@ -59,20 +59,20 @@
     <!--[if lt IE 9]>
     <script type='text/javascript' src='<?php echo get_template_directory_uri(); ?>/js/html5shiv.js?ver=3.7.3'></script>
     <![endif]-->
-    <!--<script type='text/javascript' src='http://ozviegroup.com/wp-content/themes/dynamik-gen/js/sticky-menu.js?ver=1.0.0'></script>-->
-    <link rel='https://api.w.org/' href='http://ozviegroup.com/wp-json/' />
-    <link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://ozviegroup.com/xmlrpc.php?rsd" />
-    <link rel="alternate" type="application/json+oembed" href="http://ozviegroup.com/wp-json/oembed/1.0/embed?url=http%3A%2F%2Fozviegroup.com%2F" />
-    <link rel="alternate" type="text/xml+oembed" href="http://ozviegroup.com/wp-json/oembed/1.0/embed?url=http%3A%2F%2Fozviegroup.com%2F&#038;format=xml" />
+    <!--<script type='text/javascript' src='<?php /*echo get_site_url(); */?>/wp-content/themes/dynamik-gen/js/sticky-menu.js?ver=1.0.0'></script>-->
+    <link rel='https://api.w.org/' href='<?php echo get_site_url(); ?>/wp-json/' />
+    <link rel="EditURI" type="application/rsd+xml" title="RSD" href="<?php echo get_site_url(); ?>/xmlrpc.php?rsd" />
+    <link rel="alternate" type="application/json+oembed" href="<?php echo get_site_url(); ?>/wp-json/oembed/1.0/embed?url=http%3A%2F%2Fozviegroup.com%2F" />
+    <link rel="alternate" type="text/xml+oembed" href="<?php echo get_site_url(); ?>/wp-json/oembed/1.0/embed?url=http%3A%2F%2Fozviegroup.com%2F&#038;format=xml" />
     <meta name="generator" content="WPML ver:3.8.2 stt:1,58;" />
-    <link rel="pingback" href="http://ozviegroup.com/xmlrpc.php" />
+    <link rel="pingback" href="<?php echo get_site_url(); ?>/xmlrpc.php" />
     <meta itemprop="name" content="Ozvie Group" />
-    <meta itemprop="url" content="http://ozviegroup.com/" />
+    <meta itemprop="url" content="<?php echo get_site_url(); ?>/" />
     <meta name="generator" content="Powered by Slider Revolution 5.3.1.5 - responsive, Mobile-Friendly Slider Plugin for WordPress with comfortable drag and drop interface." />
-    <link rel="icon" href="http://ozviegroup.com/wp-content/uploads/2017/04/cropped-logo-ozvie-group-32x32.png" sizes="32x32" />
-    <link rel="icon" href="http://ozviegroup.com/wp-content/uploads/2017/04/cropped-logo-ozvie-group-192x192.png" sizes="192x192" />
-    <link rel="apple-touch-icon-precomposed" href="http://ozviegroup.com/wp-content/uploads/2017/04/cropped-logo-ozvie-group-180x180.png" />
-    <meta name="msapplication-TileImage" content="http://ozviegroup.com/wp-content/uploads/2017/04/cropped-logo-ozvie-group-270x270.png" />
+    <link rel="icon" href="<?php echo get_site_url(); ?>/wp-content/uploads/2017/04/cropped-logo-ozvie-group-32x32.png" sizes="32x32" />
+    <link rel="icon" href="<?php echo get_site_url(); ?>/wp-content/uploads/2017/04/cropped-logo-ozvie-group-192x192.png" sizes="192x192" />
+    <link rel="apple-touch-icon-precomposed" href="<?php echo get_site_url(); ?>/wp-content/uploads/2017/04/cropped-logo-ozvie-group-180x180.png" />
+    <meta name="msapplication-TileImage" content="<?php echo get_site_url(); ?>/wp-content/uploads/2017/04/cropped-logo-ozvie-group-270x270.png" />
     <style>button#responsive-menu-button,
         #responsive-menu-container {
             display: none;

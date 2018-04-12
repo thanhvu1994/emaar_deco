@@ -20,7 +20,7 @@
                             <ul>	<!-- SLIDE  -->
                                 <li data-index="rs-59" data-transition="fade" data-slotamount="default" data-hideafterloop="0" data-hideslideonmobile="off"  data-easein="default" data-easeout="default" data-masterspeed="300"  data-thumb=""  data-rotate="0"  data-saveperformance="off"  data-title="Slide" data-param1="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="">
                                     <!-- MAIN IMAGE -->
-                                    <img src="http://ozviegroup.com/wp-content/plugins/revslider/admin/assets/images/transparent.png" style='background-color:#000000' alt="" title="Home"  data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" data-bgparallax="off" class="rev-slidebg" data-no-retina>
+                                    <img src="<?php echo get_template_directory_uri().'/images/transparent.png'; ?>" style='background-color:#000000' alt="" title="Home"  data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" data-bgparallax="off" class="rev-slidebg" data-no-retina>
                                     <!-- LAYERS -->
 
                                     <!-- LAYER NR. 1 -->
@@ -42,7 +42,7 @@
                                          data-paddingleft="[0,0,0,0]"
 
                                          style="z-index: 5;">
-                                        <img src="http://ozviegroup.com/wp-content/uploads/2017/04/logo-ozvie-group-trang_s.png" alt="" data-ww="190px" data-hh="280px" width="190" height="280" data-no-retina>
+                                        <img src="<?php echo get_field('logo'); ?>" alt="" data-no-retina>
                                     </div>
                                 </li>
                             </ul>
@@ -136,7 +136,7 @@
                     <header class="entry-header"></header>
                     <div class="entry-content" itemprop="text"></div>
                 </article>
-                <img src="http://ozviegroup.com/wp-content/themes/dynamik-gen/images/content-filler.png" class="dynamik-content-filler-img" alt="">
+                <img src="<?php echo get_template_directory_uri().'/images/content-filler.png'; ?>" class="dynamik-content-filler-img" alt="">
             </main>
         </div>
     </div>
