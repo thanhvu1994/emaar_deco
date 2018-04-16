@@ -234,14 +234,14 @@ function sortMenuItems($arrMenuItems){
 function check_active_menu( $menu_item ) {
     $actual_link = ( isset( $_SERVER['HTTPS'] ) ? "https" : "http" ) . "://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
     if ( $actual_link == $menu_item->url ) {
-        return 'current active';
+        return 'current-menu-item current-page-item';
     }
     return '';
 }
 
 add_action('admin_head', 'show_favicon');
 function show_favicon() {
-    echo '<link href="'.get_template_directory_uri().'/images/favicon.ico" rel="icon" type="image/x-icon">';
+    echo '<link href="'.get_template_directory_uri().'/images/favicon.png" rel="icon" type="image/x-icon">';
 }
 
 function insert_contact($data) {
@@ -336,17 +336,62 @@ function decrypt($ivHashCiphertext, $password) {
 
 function my_custom_login_logo() {
     echo '<style type="text/css">
-	h1 a {background-image:url('.get_bloginfo("template_url").'/images/logo.png) !important; margin:0 auto;background-size:320px 79px !important; width:320px !important;height:79px !important; }
+	h1 a {background-image:url('.get_bloginfo("template_url").'/images/logo.png) !important; margin:0 auto;background-size:68px 100px !important; width:68px !important;height:100px !important; }
 	</style>';
 }
 add_filter( 'login_head', 'my_custom_login_logo' );
 
-function restrict_post_deletion($post_ID){ // not allow to delete static pages
-    $restricted_pages = array(235,391,6,282,211,373,46,382,32,135,54);
-    if(in_array($post_ID, $restricted_pages)){
-        echo "You are not authorized to delete this page.";
-        exit;
+function acf_load_category_choices( $field ) {
+
+    // reset choices
+    $field['choices'] = array();
+
+
+    $args = array(
+    'sort_order' => 'asc',
+    'sort_column' => 'menu_order',
+    'hierarchical' => 1,
+    'exclude' => '',
+    'include' => '',
+    'meta_key' => '',
+    'meta_value' => '',
+    'authors' => '',
+    'child_of' => 21,
+    'parent' => -1,
+    'exclude_tree' => '',
+    'number' => '',
+    'offset' => 0,
+    'post_type' => 'page',
+    'post_status' => 'publish'
+    );
+
+    $pages = get_pages($args);
+
+    foreach($pages as $page){
+        if($page->post_parent == 21){
+            $field['choices'][$page->ID] = $page->post_title;
+        }else{
+            $field['choices'][$page->ID] = '-- '.$page->post_title;
+        }
     }
+
+    // return the field
+    return $field;
+
 }
-add_action('wp_trash_post', 'restrict_post_deletion', 10, 1);
-add_action('before_delete_post', 'restrict_post_deletion', 10, 1);
+
+function wp_get_attachment( $attachment_id ) {
+
+    $attachment = get_post( $attachment_id );
+    return array(
+        'alt' => get_post_meta( $attachment->ID, '_wp_attachment_image_alt', true ),
+        'caption' => $attachment->post_excerpt,
+        'description' => $attachment->post_content,
+        'href' => get_permalink( $attachment->ID ),
+        'src' => $attachment->guid,
+        'title' => $attachment->post_title
+    );
+}
+
+add_filter('acf/load_field/name=category', 'acf_load_category_choices');
+

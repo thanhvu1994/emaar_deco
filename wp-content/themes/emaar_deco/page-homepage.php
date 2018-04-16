@@ -7,9 +7,6 @@
     <!-- nav-primary -->
     <?php get_template_part('nav-primary'); ?>
 
-    <!-- header -->
-    <?php get_header(); ?>
-
     <div class="site-inner">
         <div id="slide_intro" class="widget-area dynamik-widget-area slide-intro">
             <section id="rev-slider-widget-4" class="widget widget_revslider">

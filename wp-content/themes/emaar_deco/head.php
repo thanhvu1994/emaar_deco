@@ -2,8 +2,23 @@
 <html lang="en-US">
 <head itemscope itemtype="https://schema.org/WebSite">
     <meta charset="UTF-8" />
-    <title>Ozvie Group – Ovzvie, where your ideas become reality</title>
-    <meta name="description" content="Ovzvie, where your ideas become reality" />
+    <title>
+        <?php if(is_home()): ?>
+            <?php echo get_bloginfo('name'); ?> - <?php echo get_bloginfo('description', 6); ?>
+        <?php else: ?>
+            <?php if(!empty(get_field('meta_title'))): ?>
+                <?php echo get_field('meta_title'); ?>
+            <?php else: ?>
+                <?php echo get_bloginfo('name'); ?> - <?php echo get_bloginfo('description'); ?>
+            <?php endif; ?>
+        <?php endif; ?>
+    </title>
+    <?php if(is_home()): ?>
+        <meta name="description" content="<?php echo get_bloginfo('description'); ?>" />
+    <?php else: ?>
+        <meta name="description" content="<?php echo get_field('meta_description'); ?>" />
+    <?php endif; ?>
+
     <meta name="robots" content="noodp,noydir" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" id="dynamik-viewport"/>
     <script>var et_site_url='<?php echo get_site_url(); ?>';var et_post_id='40';function et_core_page_resource_fallback(a,b){"undefined"===typeof b&&(b=a.sheet.cssRules&&0===a.sheet.cssRules.length);b&&(a.onerror=null,a.onload=null,a.href?a.href=et_site_url+"/?et_core_page_resource="+a.id+et_post_id:a.src&&(a.src=et_site_url+"/?et_core_page_resource="+a.id+et_post_id))}
@@ -33,6 +48,7 @@
             padding: 0 !important;
         }
     </style>
+    <?php wp_head(); ?>
     <link rel='stylesheet' id='dynamik_minified_stylesheet-css'  href='<?php echo get_template_directory_uri(); ?>/css/dynamik-min.css?ver=1510550149' type='text/css' media='all' />
     <link rel='stylesheet' id='font-awesome-css'  href='<?php echo get_template_directory_uri(); ?>/css/font-awesome.min.css?ver=4.7.0' type='text/css' media='screen' />
     <link rel='stylesheet' id='rs-plugin-settings-css'  href='<?php echo get_template_directory_uri(); ?>/css/settings.css?ver=5.3.1.5' type='text/css' media='all' />
@@ -40,6 +56,7 @@
         #rs-demo-id {}
     </style>
     <link rel='stylesheet' id='wpml-legacy-horizontal-list-0-css'  href='<?php echo get_template_directory_uri(); ?>/style.css?ver=1' type='text/css' media='all' />
+    <link rel='stylesheet' id='wpml-legacy-horizontal-list-0-css'  href='<?php echo get_template_directory_uri(); ?>/css/custom.css' type='text/css' media='all' />
     <link rel='stylesheet' id='wpml-cms-nav-css-css'  href='<?php echo get_template_directory_uri(); ?>/css/navigation.css?ver=1.4.21' type='text/css' media='all' />
     <link rel='stylesheet' id='cms-navigation-style-base-css'  href='<?php echo get_template_directory_uri(); ?>/css/cms-navigation-base.css?ver=1.4.21' type='text/css' media='screen' />
     <link rel='stylesheet' id='cms-navigation-style-css'  href='<?php echo get_template_directory_uri(); ?>/css/cms-navigation.css?ver=1.4.21' type='text/css' media='screen' />
@@ -69,8 +86,6 @@
     <meta itemprop="name" content="Ozvie Group" />
     <meta itemprop="url" content="<?php echo get_site_url(); ?>/" />
     <meta name="generator" content="Powered by Slider Revolution 5.3.1.5 - responsive, Mobile-Friendly Slider Plugin for WordPress with comfortable drag and drop interface." />
-    <link rel="icon" href="<?php echo get_site_url(); ?>/wp-content/uploads/2017/04/cropped-logo-ozvie-group-32x32.png" sizes="32x32" />
-    <link rel="icon" href="<?php echo get_site_url(); ?>/wp-content/uploads/2017/04/cropped-logo-ozvie-group-192x192.png" sizes="192x192" />
     <link rel="apple-touch-icon-precomposed" href="<?php echo get_site_url(); ?>/wp-content/uploads/2017/04/cropped-logo-ozvie-group-180x180.png" />
     <meta name="msapplication-TileImage" content="<?php echo get_site_url(); ?>/wp-content/uploads/2017/04/cropped-logo-ozvie-group-270x270.png" />
     <style>button#responsive-menu-button,
@@ -571,7 +586,8 @@
             }
 
 
-        }</style><script>jQuery(document).ready(function($) {
+        }</style>
+    <script>jQuery(document).ready(function($) {
 
             var ResponsiveMenu = {
                 trigger: '#responsive-menu-button',
@@ -762,5 +778,6 @@
                 }
             };
             ResponsiveMenu.init();
-        });</script></head>
+        });</script>
+</head>
 <body class="home page-template-default page page-id-40 gecko header-image full-width-content windows ie11 feature-top-outside site-fluid override et-pb-theme-dynamik-gen et_minified_js et_minified_css et_divi_builder responsive-menu-slide-left" itemscope itemtype="https://schema.org/WebPage">

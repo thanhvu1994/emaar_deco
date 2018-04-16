@@ -42,7 +42,7 @@
                                              data-paddingleft="[0,0,0,0]"
 
                                              style="z-index: 5;">
-                                            <img src="<?php echo get_field('logo', 5); ?>" alt="" data-no-retina>
+                                            <img src="<?php echo get_field('logo', 6); ?>" alt="" data-no-retina>
                                         </div>
                                     </li>
                                 </ul>
@@ -90,6 +90,7 @@
                                         revapi8 = tpj("#rev_slider_8_1").show().revolution({
                                             sliderType:"hero",
                                             jsFileLocation:"//ozviegroup.com/wp-content/plugins/revslider/public/assets/js/",
+                                            jsIncludeToBody: true,
                                             sliderLayout:"fullscreen",
                                             dottedOverlay:"none",
                                             delay:9000,

@@ -54,9 +54,38 @@
                 <span class="responsive-menu-inner"></span>
             </span>
 
-        </button><div id="responsive-menu-container" class="slide-left">
+        </button>
+        <?php
+        $menuLocations = get_nav_menu_locations();
+        $menuID = $menuLocations['main-menu'];
+        $menuItems = sortMenuItems(wp_get_nav_menu_items($menuID));
+        ?>
+        <div id="responsive-menu-container" class="slide-left">
             <div id="responsive-menu-wrapper">
-                <ul id="responsive-menu" class=""><li id="responsive-menu-item-73" class=" menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-40 current_page_item responsive-menu-item responsive-menu-current-item"><a class="responsive-menu-item-link" href="http://ozviegroup.com/" itemprop="url">Home</a></li><li id="responsive-menu-item-132" class=" menu-item menu-item-type-post_type menu-item-object-page responsive-menu-item"><a class="responsive-menu-item-link" href="http://ozviegroup.com/about-us/" itemprop="url">About us</a></li><li id="responsive-menu-item-78" class=" menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children responsive-menu-item responsive-menu-item-has-children"><a class="responsive-menu-item-link" href="http://ozviegroup.com/services/" itemprop="url">Services<div class="responsive-menu-subarrow">▼</div></a><ul class='responsive-menu-submenu responsive-menu-submenu-depth-1'><li id="responsive-menu-item-431" class=" menu-item menu-item-type-post_type menu-item-object-page responsive-menu-item"><a class="responsive-menu-item-link" href="http://ozviegroup.com/services/painting/" itemprop="url">Painting</a></li><li id="responsive-menu-item-430" class=" menu-item menu-item-type-post_type menu-item-object-page responsive-menu-item"><a class="responsive-menu-item-link" href="http://ozviegroup.com/services/exporting/" itemprop="url">Exporting</a></li><li id="responsive-menu-item-429" class=" menu-item menu-item-type-post_type menu-item-object-page responsive-menu-item"><a class="responsive-menu-item-link" href="http://ozviegroup.com/services/designing/" itemprop="url">Designing</a></li></ul></li><li id="responsive-menu-item-493" class=" menu-item menu-item-type-post_type menu-item-object-page responsive-menu-item"><a class="responsive-menu-item-link" href="http://ozviegroup.com/interior-products/" itemprop="url">Interior Products</a></li><li id="responsive-menu-item-495" class=" menu-item menu-item-type-post_type menu-item-object-page responsive-menu-item"><a class="responsive-menu-item-link" href="http://ozviegroup.com/furnitures/" itemprop="url">Furnitures</a></li><li id="responsive-menu-item-662" class=" menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children responsive-menu-item responsive-menu-item-has-children"><a class="responsive-menu-item-link" href="http://ozviegroup.com/category/projects/" itemprop="url">Projects<div class="responsive-menu-subarrow">▼</div></a><ul class='responsive-menu-submenu responsive-menu-submenu-depth-1'><li id="responsive-menu-item-663" class=" menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children responsive-menu-item responsive-menu-item-has-children"><a class="responsive-menu-item-link" href="http://ozviegroup.com/category/projects/project-in-australia/" itemprop="url">Project in Australia<div class="responsive-menu-subarrow">▼</div></a><ul class='responsive-menu-submenu responsive-menu-submenu-depth-2'><li id="responsive-menu-item-1395" class=" menu-item menu-item-type-taxonomy menu-item-object-category responsive-menu-item"><a class="responsive-menu-item-link" href="http://ozviegroup.com/category/projects/project-in-australia/apartments/" itemprop="url">Apartments</a></li><li id="responsive-menu-item-1396" class=" menu-item menu-item-type-taxonomy menu-item-object-category responsive-menu-item"><a class="responsive-menu-item-link" href="http://ozviegroup.com/category/projects/project-in-australia/house-town-house/" itemprop="url">House &#038; Town House</a></li></ul></li><li id="responsive-menu-item-664" class=" menu-item menu-item-type-taxonomy menu-item-object-category responsive-menu-item"><a class="responsive-menu-item-link" href="http://ozviegroup.com/category/projects/project-in-vietnam/" itemprop="url">Project in Vietnam</a></li></ul></li><li id="responsive-menu-item-464" class=" menu-item menu-item-type-post_type menu-item-object-page responsive-menu-item"><a class="responsive-menu-item-link" href="http://ozviegroup.com/gallery/" itemprop="url">Gallery</a></li><li id="responsive-menu-item-75" class=" menu-item menu-item-type-post_type menu-item-object-page responsive-menu-item"><a class="responsive-menu-item-link" href="http://ozviegroup.com/contact/" itemprop="url">Contact</a></li></ul>                                                                    <div id="responsive-menu-additional-content"></div>                        </div>
+                <ul id="responsive-menu" class="">
+                    <?php foreach($menuItems as $key => $item): ?>
+                        <li id="responsive-menu-item-<?php echo $key; ?>" class=" menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children responsive-menu-item responsive-menu-item-has-children">
+                            <a class="responsive-menu-item-link" href="<?php echo $item['url']; ?>" itemprop="url"><?php echo $item['title']; ?> <?php echo (!empty($item['child']))? '<div class="responsive-menu-subarrow">▼</div>' : ''; ?> </a>
+                            <?php if(!empty($item['child'])): ?>
+                                <ul class='responsive-menu-submenu responsive-menu-submenu-depth-1'>
+                                    <?php foreach($item['child'] as $keyChild => $itemChild): ?>
+                                        <li id="responsive-menu-item-<?php echo $keyChild; ?>" class=" menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children responsive-menu-item responsive-menu-item-has-children">
+                                            <a class="responsive-menu-item-link" href="<?php echo $itemChild['url']; ?>" itemprop="url"><?php echo $itemChild['title']; ?> <?php echo (!empty($itemChild['child']))? '<div class="responsive-menu-subarrow">▼</div>' : ''; ?> </a>
+                                            <?php if(!empty($itemChild['child'])): ?>
+                                                <ul class='responsive-menu-submenu responsive-menu-submenu-depth-2'>
+                                                    <?php foreach($itemChild['child'] as $keyChildChild => $itemChildChild): ?>
+                                                        <li id="responsive-menu-item-<?php echo $keyChildChild; ?>" class=" menu-item menu-item-type-taxonomy menu-item-object-category responsive-menu-item"><a class="responsive-menu-item-link" href="<?php echo $itemChildChild['url']; ?>" itemprop="url"><?php echo $itemChildChild['title']; ?></a></li>
+                                                    <?php endforeach; ?>
+                                                </ul>
+                                            <?php endif; ?>
+                                        </li>
+                                    <?php endforeach; ?>
+                                </ul>
+                            <?php endif; ?>
+                    <?php endforeach; ?>
+                </ul>
+                <div id="responsive-menu-additional-content"></div>
+            </div>
         </div>
         <script type="text/javascript">
             function revslider_showDoubleJqueryError(sliderID) {
@@ -111,5 +140,6 @@
         </script>
         <script type='text/javascript' src='<?php echo get_template_directory_uri(); ?>/js/wpv-pagination-embedded.js?ver=2.4.1'></script>
         <script type='text/javascript' src='<?php echo includes_url(); ?>/js/wp-embed.min.js?ver=4.8.6'></script>
+        <?php wp_footer(); ?>
     </body>
 </html>
