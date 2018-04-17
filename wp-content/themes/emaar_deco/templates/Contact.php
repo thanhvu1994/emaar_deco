@@ -62,7 +62,7 @@
                         </div>
                     </div>
                 </article>
-                <img src="http://ozviegroup.com/wp-content/themes/dynamik-gen/images/content-filler.png" class="dynamik-content-filler-img" alt="">
+                <img src="<?php echo get_template_directory_uri().'/images/content-filter.png'; ?>" class="dynamik-content-filler-img" alt="">
             </main>
         </div>
     </div>
@@ -70,6 +70,7 @@
 <style>
     .contact-form input, .contact-form textarea{
         padding: 5px 10px !important;
+        background-color: white !important;
     }
     .contact-form label{
         color: white !important;
@@ -82,6 +83,7 @@
         float: left !important;
         color: red !important;
         text-align: center !important;
+        background-color: white !important;
     }
     .wpcf7-textarea, .wpcf7-submit{
         border: 1px solid #bbb !important;

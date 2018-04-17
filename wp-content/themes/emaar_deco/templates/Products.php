@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name: Projects Page
+ * Template Name: Products Page
  *
  * @package WordPress
  * @subpackage Emaar Deco Theme
@@ -74,14 +74,8 @@
                     <!-- wpv-loop-start -->
                     <?php
                         $args = array(
-                            'post_type' => 'project',
-                            'meta_query' => array(
-                                array(
-                                    'key' => 'category',
-                                    'value' => $arrayCateID,
-                                    'compare' => 'IN'
-                                )
-                            )
+                            'post_type' => 'product',
+                            'post_status' => 'publish'
                         );
 
                         $posts = get_posts($args);
@@ -98,8 +92,17 @@
                                     <?php endif; ?>
                                             <div class="full">
                                                 <div class="imagesp"><a href="<?php echo get_permalink($item->ID); ?>"><img width="1000" height="750" src="<?php echo get_field('feature_image',$item->ID); ?>" class="attachment-large size-large wp-post-image" alt="<?php echo $item->post_title; ?>"/></a></div>
-                                                <div class="titlesp">
-                                                    <a href="<?php echo get_permalink($item->ID); ?>"><?php echo $item->post_title; ?></a>
+                                                <div class="titlesp" style="text-align: left;">
+                                                    <a style="font-weight: normal;" href="<?php echo get_permalink($item->ID); ?>"><?php echo $item->post_title; ?></a>
+                                                    <p>
+                                                        <?php for($i = 1; $i <= get_field('star',$item->ID); $i++): ?>
+                                                            &starf;
+                                                        <?php endfor; ?>
+                                                        <?php for($i = get_field('star',$item->ID); $i < 5; $i++): ?>
+                                                            &star;
+                                                        <?php endfor; ?>
+                                                    </p>
+                                                    <p class="pricesp"><?php echo number_format(get_field('price',$item->ID), 0, ',', '.'); ?> VNĐ</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -109,13 +112,7 @@
                     </div>
                     <!-- wpv-loop-end -->
                 </div>
-                <div class="archive-pagination pagination">
-                    <ul>
-                        <li class="active" ><a href="http://ozviegroup.com/category/projects/" aria-label="Current page">1</a></li>
-                        <li><a href="http://ozviegroup.com/category/projects/page/2/">2</a></li>
-                        <li class="pagination-next"><a href="http://ozviegroup.com/category/projects/page/2/" >Next Page &#x000BB;</a></li>
-                    </ul>
-                </div>
+
                 <img src="<?php echo get_template_directory_uri().'/images/content-filter.png'; ?>" class="dynamik-content-filler-img" alt="">
                 <?php endwhile; endif; ?>
             </main>
@@ -130,10 +127,16 @@
 </script>
 <style>
     .imagesp{
-        object-fit: none;
+        object-fit: cover;
         object-position: center;
-        width: 240px;
+        width: 100%;
         height: 240px;
         overflow: hidden;
+    }
+    .titlesp a{
+        font-size: 16px !important;
+    }
+    .pricesp{
+        font-weight: 550;
     }
 </style>
