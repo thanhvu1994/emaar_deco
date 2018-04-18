@@ -109,13 +109,6 @@
                     </div>
                     <!-- wpv-loop-end -->
                 </div>
-                <div class="archive-pagination pagination">
-                    <ul>
-                        <li class="active" ><a href="http://ozviegroup.com/category/projects/" aria-label="Current page">1</a></li>
-                        <li><a href="http://ozviegroup.com/category/projects/page/2/">2</a></li>
-                        <li class="pagination-next"><a href="http://ozviegroup.com/category/projects/page/2/" >Next Page &#x000BB;</a></li>
-                    </ul>
-                </div>
                 <img src="<?php echo get_template_directory_uri().'/images/content-filter.png'; ?>" class="dynamik-content-filler-img" alt="">
                 <?php endwhile; endif; ?>
             </main>
