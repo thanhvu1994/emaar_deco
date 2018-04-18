@@ -46,3 +46,15 @@
 .interior-text a, .interior-text a:visited{
     color: white;
 }
+
+.language-switcher{
+    list-style-type: none;
+}
+
+.language-switcher ul{
+    list-style-type: none;
+}
+
+.language-switcher ul li{
+    display: inline-block;
+}

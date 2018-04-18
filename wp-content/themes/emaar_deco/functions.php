@@ -84,94 +84,14 @@ if ( ! function_exists( 'nus_theme_setup' ) ) {
          * Tạo sidebar cho theme
          */
         $sidebar = array(
-            'name' => __('Header', 'nus'),
-            'id' => 'header-sidebar',
-            'description' => 'Header Sidebar',
-            'class' => 'header-sidebar',
+            'name' => __('Language Switcher', 'nus'),
+            'id' => 'language-switcher',
+            'description' => 'Language Switcher',
+            'class' => 'language-switcher',
             'before_title' => '<h3 class="widgettitle">',
             'after_sidebar' => '</h3>'
         );
         register_sidebar( $sidebar );
-
-        $sidebar = array(
-            'name' => __('Footer', 'nus'),
-            'id' => 'footer-sidebar',
-            'description' => 'Footer Sidebar',
-            'class' => 'footer-sidebar',
-            'before_title' => '<h3 class="widgettitle">',
-            'after_sidebar' => '</h3>'
-        );
-        register_sidebar( $sidebar );
-
-        $sidebar = array(
-            'name' => __('Top Sidebar', 'nus'),
-            'id' => 'homepage-top-sidebar',
-            'description' => 'Sidebar at Top of Giving Page',
-            'class' => 'homepage-top-sidebar',
-            'before_title' => '<h3 class="widgettitle">',
-            'after_sidebar' => '</h3>'
-        );
-        register_sidebar( $sidebar );
-
-        $sidebar = array(
-            'name' => __('Middle Sidebar', 'nus'),
-            'id' => 'homepage-middle-sidebar',
-            'description' => 'Sidebar at Middle of Giving Page',
-            'class' => 'homepage-middle-sidebar',
-            'before_title' => '<h3 class="widgettitle">',
-            'after_sidebar' => '</h3>'
-        );
-        register_sidebar( $sidebar );
-
-        $sidebar = array(
-            'name' => __('Bottom Left Sidebar', 'nus'),
-            'id' => 'homepage-bottom-left-sidebar',
-            'description' => 'Sidebar at Bottom Left of Giving Page',
-            'class' => 'homepage-bottom-left-sidebar',
-            'before_title' => '<h3 class="widgettitle">',
-            'after_sidebar' => '</h3>'
-        );
-        register_sidebar( $sidebar );
-
-        $sidebar = array(
-            'name' => __('Bottom Right Sidebar', 'nus'),
-            'id' => 'homepage-bottom-right-sidebar',
-            'description' => 'Sidebar at Bottom Right of Giving Page',
-            'class' => 'homepage-bottom-right-sidebar',
-            'before_title' => '<h3 class="widgettitle">',
-            'after_sidebar' => '</h3>'
-        );
-        register_sidebar( $sidebar );
-
-        $sidebar = array(
-            'name' => __('Pages Bottom Banner Sidebar', 'nus'),
-            'id' => 'gv-bottom-banner-sidebar',
-            'description' => 'Banner show at bottom of some Pages',
-            'class' => 'gv-bottom-banner-sidebar',
-            'before_title' => '<h3 class="widgettitle">',
-            'after_sidebar' => '</h3>'
-        );
-        register_sidebar( $sidebar );
-
-	    $sidebar = array(
-		    'name' => __('Pages Contact Sidebar', 'nus'),
-		    'id' => 'gsd-contact-sidebar',
-		    'description' => 'Contact Block show at some Pages',
-		    'class' => 'gsd-contact-sidebar',
-		    'before_title' => '<h3 class="widgettitle">',
-		    'after_sidebar' => '</h3>'
-	    );
-	    register_sidebar( $sidebar );
-
-	    $sidebar = array(
-		    'name' => __('Share button widget', 'nus'),
-		    'id' => 'share-button-widget',
-		    'description' => 'Share button show at some Pages',
-		    'class' => 'share-button-widget',
-		    'before_title' => '<h3 class="widgettitle">',
-		    'after_sidebar' => '</h3>'
-	    );
-	    register_sidebar( $sidebar );
     }
     add_action ( 'init', 'nus_theme_setup' );
 

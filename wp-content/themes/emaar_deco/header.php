@@ -80,8 +80,8 @@ $menuItems = sortMenuItems(wp_get_nav_menu_items($menuID));
                 </section>
                 <section id="icl_lang_sel_widget-2" class="widget widget_icl_lang_sel_widget"><div class="widget-wrap">
                         <div class="wpml-ls-sidebars-header-right wpml-ls wpml-ls-legacy-list-horizontal">
-                            <ul>
-                                <!-- Do it later -->
+                            <ul class="language-switcher">
+                                <?php dynamic_sidebar('language-switcher'); ?>
                             </ul>
                         </div>
                     </div>
