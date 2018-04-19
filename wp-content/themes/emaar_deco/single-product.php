@@ -23,7 +23,7 @@
 
                     <span property="itemListElement" typeof="ListItem">
                             <a property="item" typeof="WebPage" title="Go to Products." href="<?php echo get_page_link(200); ?>" class="taxonomy category">
-                                <span property="name">Products</span>
+                                <span property="name"><?php pll_e('Products'); ?></span>
                             </a>
                             <meta property="position" content="2"> >
                     </span>
@@ -61,7 +61,7 @@
                             <!-- MasterSlider Main -->
 
                             <div class="product-description" style="margin-top: 30px;">
-                                <span>Description</span>
+                                <span><?php pll_e('Description'); ?></span>
                                 <p><?php the_content(); ?></p>
                             </div>
                         </div>
@@ -127,7 +127,7 @@
 
                         <!-- Product Description -->
                         <div class="product-description">
-                            <span>Products</span>
+                            <span><?php pll_e('Products'); ?></span>
                             <h2 style="font-weight: normal;"><?php the_title(); ?></h2>
                         </div>
 
@@ -145,22 +145,22 @@
                             </div>
 
                             <div class="cable-config">
-                                <span>Quantity</span>
+                                <span><?php pll_e('Quantity'); ?></span>
 
                                 <div class="cable-choose">
-                                    <button>Total : <?php echo get_field('quantity'); ?></button>
-                                    <button>Left : <?php echo get_field('quantity_left'); ?></button>
-                                    <button>Sold : <?php echo get_field('quantity') - get_field('quantity_left'); ?></button>
+                                    <button><?php pll_e('Total'); ?> : <?php echo get_field('quantity'); ?></button>
+                                    <button><?php pll_e('Left'); ?> : <?php echo get_field('quantity_left'); ?></button>
+                                    <button><?php pll_e('Sold'); ?> : <?php echo get_field('quantity') - get_field('quantity_left'); ?></button>
                                 </div>
 
-                                <a href="<?php echo get_page_link(25); ?>">Please contact us for more information</a>
+                                <a href="<?php echo get_page_link(25); ?>"><?php pll_e('Info'); ?></a>
                             </div>
                         </div>
 
                         <!-- Product Pricing -->
                         <div class="product-price">
                             <span><?php echo number_format(get_field('price'), 0, ',', '.'); ?> VNĐ</span>
-                            <a href="<?php echo get_page_link(25); ?>" class="cart-btn">Contact for Order</a>
+                            <a href="<?php echo get_page_link(25); ?>" class="cart-btn"><?php pll_e('Contact'); ?></a>
                         </div>
                     </div>
                 <?php endwhile; endif; ?>
